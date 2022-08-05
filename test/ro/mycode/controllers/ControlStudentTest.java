@@ -62,7 +62,13 @@ class ControlStudentTest extends ControlEnrolment {
         assertEquals(false,controlStudent.findByAge("David",22));
         assertEquals(true,controlStudent.findByAge("David",26));
 
+    }
+    @Test
+    public void verifyEmailTest(){
+        ControlStudent controlStudent = new ControlStudent();
 
+
+        assertEquals(true,controlStudent.findByEmail("Craciun","davidcraciun@gmail.com"));
     }
 
 
