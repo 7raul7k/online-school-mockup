@@ -1,0 +1,7 @@
+1001,Analiza Matematica,Matematica,Antonescu,Adina
+1002,Fundamentele algebrice ale informaticii,Informatica,Dragos,Stanciu
+1003,Algoritmi fundamentali,Informatica,Antonescu,Adina
+1004,Fundamentele programarii,Informatica,Dragos,Stanciu
+1005,Logica matematica si computationala,Matematica,Daria,Birsan
+1006,Limba engleza,Engleza,Mirel,Tudor
+1007,Ed.Fizica si sport,Sport,Ana,Bratosin

@@ -1,0 +1,12 @@
+11,David,Alexandru,alexandrudavid@gmail.com,22,student
+12,Ursulescu,Andrei,andreiursulescu@gmail.com,21,student
+13,Ciuca,Eduard,eduardciuca@gmail.com,20,student
+14,Filip,Adrian,adrianfilip@gmail.com,21,student
+15,Craciun,David,davidcraciun@gmail.com,22,student
+16,Andronescu,Alin,alinandronescu@gmail.com,20,student
+17,Antonescu,Adina,adinaantonescu@gmail.com,30,profesor
+18,Dragan,Constantin,constantindragan@gmail.com,31,profesor
+19,Dragos,Stanciu,stanciudragos@gmail.com,32,profesor
+20,Daria,Birsan,birsandaria@gmail.com,34,profesor
+21,Mirel,Tudor,tudormirel@gmail.com,29,profesor
+22,Ana,Bratosin,bratosinana@gmail.com,31,profesor
