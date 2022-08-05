@@ -68,6 +68,15 @@ class ControlEnrolmentTest extends ControlEnrolment {
         controlEnrolment.courseswithFewestStudents();
     }
 
+    @Test
+
+    public void courseWithMostStudents(){
+        ControlEnrolment controlEnrolment = new ControlEnrolment();
+        int studenti = controlEnrolment.coursewithMostStudents();
+
+        assertEquals(studenti,controlEnrolment.coursewithMostStudents());
+
+    }
 
 
 

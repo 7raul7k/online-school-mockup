@@ -45,5 +45,4 @@ class ControlCourseTest extends ControlCourse {
     }
 
 
-
 }
