@@ -41,8 +41,38 @@ class ControlCourseTest extends ControlCourse {
     public void findbynameTest(){
         ControlCourse controlCourse = new ControlCourse();
         assertEquals(true,controlCourse.findCourseName("Limba engleza"));
+        assertEquals(false,controlCourse.findCourseName("Limba franceza"));
 
     }
+
+    @Test
+    public void returnCourseByIdTest() {
+        ControlCourse controlCourse = new ControlCourse();
+        Course course = new Course(1006, "Limba engleza", "Engleza");
+        int id = course.getId();
+
+
+        assertEquals(id, controlCourse.returnCourseById(1006).getId());
+        assertEquals(null,controlCourse.returnCourseById(1123));
+    }
+
+    @Test
+    public void returnIDByNameTest(){
+        ControlCourse controlCourse = new ControlCourse();
+        Course course = new Course(1006, "Limba engleza", "Engleza");
+        assertEquals(null,returnIDbyName("Limba franceza"));
+        assertEquals(course.getId(),returnIDbyName("Limba engleza").getId());
+
+    }
+    @Test
+    public void findCourseByNameTest(){
+        ControlCourse controlCourse = new ControlCourse();
+        Course course = new Course(1006, "Limba engleza", "Engleza");
+        assertEquals(course.getId(),controlCourse.findCoursebyName("Limba engleza").getId());
+        assertEquals(null,controlCourse.findCoursebyName("Limba franceza"));
+    }
+
+
 
 
 }

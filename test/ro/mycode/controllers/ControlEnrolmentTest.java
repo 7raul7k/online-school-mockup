@@ -77,11 +77,13 @@ class ControlEnrolmentTest extends ControlEnrolment {
         assertEquals(studenti,controlEnrolment.coursewithMostStudents());
 
     }
+    @Test
 
+    public void findEnrolmentByStudentCourseID(){
+        ControlEnrolment controlEnrolment = new ControlEnrolment();
 
+        assertEquals(null,controlEnrolment.findEnrolmentByStudentCourseId(20003,48323));
 
-
-
-
+    }
 
 }

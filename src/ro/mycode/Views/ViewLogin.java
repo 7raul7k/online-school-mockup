@@ -1,18 +1,17 @@
 package ro.mycode.Views;
 
-import ro.mycode.controllers.ControlStudent;
+import ro.mycode.controllers.absolete;
 import ro.mycode.models.User;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ViewLogin {
 
-    private ControlStudent controlStudent;
+    private absolete controlStudent;
     Scanner scanner;
 
     public ViewLogin(){
-        this.controlStudent= new ControlStudent();
+        this.controlStudent= new absolete();
         this.scanner= new Scanner(System.in);
 
     }

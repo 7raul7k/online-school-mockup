@@ -3,16 +3,13 @@ package ro.mycode.controllers;
 import ro.mycode.models.User;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ControlStudent {
+public class absolete {
     private ArrayList<User> listUsers;
 
-    public ControlStudent() {
+    public absolete() {
 
         this.listUsers = new ArrayList<>();
         this.load();
@@ -43,7 +40,7 @@ public class ControlStudent {
 
         for (int i = 0; i < listUsers.size(); i++) {
 
-            System.out.println(listUsers.get(i).descriereStudent());
+            System.out.println(listUsers.get(i).descriere());
 
         }
 

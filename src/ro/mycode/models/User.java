@@ -36,7 +36,7 @@ public class User {
         this.tip = proprietati[5];
 
     }
-    public String descriereStudent(){
+    public String descriere(){
 
         String text ="";
         text+="First name: " + firstName;

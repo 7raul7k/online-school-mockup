@@ -1,8 +1,7 @@
 package ro.mycode;
 
-import ro.mycode.Views.ViewLogin;
 import ro.mycode.Views.ViewProfesor;
-import ro.mycode.controllers.ControlStudent;
+import ro.mycode.controllers.ControlUser;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,9 +23,11 @@ public class Main {
 //
 //        viewLogin.play();
 
-        ViewProfesor viewProfesor = new ViewProfesor();
-        viewProfesor.play();
+//        ViewProfesor viewProfesor = new ViewProfesor();
+//        viewProfesor.play();
 
+//        ControlUser user = new ControlUser();
+//        user.describeUser();
 
 
     }
