@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ro.mycode.models.Course;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ControlCourseTest extends ControlCourse {
@@ -72,6 +74,13 @@ class ControlCourseTest extends ControlCourse {
         assertEquals(null,controlCourse.findCoursebyName("Limba franceza"));
     }
 
+    @Test
+    public void showTest(){
+        ControlCourse controlCourse = new ControlCourse();
+        String text = controlCourse.showCourse();
+
+        assertEquals(text,controlCourse.showCourse());
+    }
 
 
 

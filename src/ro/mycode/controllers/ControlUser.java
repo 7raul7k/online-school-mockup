@@ -4,7 +4,11 @@ import ro.mycode.models.Student;
 import ro.mycode.models.Teacher;
 import ro.mycode.models.User;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -45,7 +49,7 @@ public class ControlUser {
     }
 
     public int findUserbyName(String name){
-        for (int i = 0; i <= users.size();i++){
+        for (int i = 0; i <= users.size()-1;i++){
             if(users.get(i).getFirstName().equals(name)){
                 return i;
             }
@@ -58,6 +62,10 @@ public class ControlUser {
         if(pos == -1){
             this.users.add(newUser);
         }
+
+    }
+    public int sizeUser(){
+        return users.size();
     }
 
     public void deleteUser(String fName){
@@ -83,12 +91,18 @@ public class ControlUser {
 
     public void save(){
        try {
+         File file = new File("C:\\mycode\\JavaBasics\\OOP\\OnlineSchool\\src\\ro\\mycode\\resources\\students.txt");
+         FileWriter fileWriter = new FileWriter(file);
+           PrintWriter printWriter = new PrintWriter(fileWriter);
+           printWriter.print(this);
+           printWriter.close();
 
-       }catch (Exception e){
+           }catch (Exception e){
+
            e.printStackTrace();
+
        }
 
+        }
 
     }
-
-}

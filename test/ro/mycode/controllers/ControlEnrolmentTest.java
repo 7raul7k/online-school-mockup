@@ -86,4 +86,14 @@ class ControlEnrolmentTest extends ControlEnrolment {
 
     }
 
+    @Test
+    public void returnEnrolmentbyCourseTest(){
+        ControlEnrolment controlEnrolment = new ControlEnrolment();
+        assertEquals(true,controlEnrolment.findStudentbyCourse(11,1007));
+        assertEquals(false,controlEnrolment.findStudentbyCourse(214,1008));
+
+
+
+    }
+
 }

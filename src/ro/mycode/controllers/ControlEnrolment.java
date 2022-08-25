@@ -2,6 +2,8 @@ package ro.mycode.controllers;
 import ro.mycode.models.Enrolment;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,6 +32,7 @@ public class ControlEnrolment {
             }
 
         } catch (Exception e) {
+            e.printStackTrace();
 
         }
 
@@ -84,10 +87,12 @@ public class ControlEnrolment {
 
 
     public void removeEnrolment(int studentID, int courseID) {
-        for(int i = 0;i <= enrolmentList.size()-1 ;i++){
-            if(enrolmentList.get(i).getCourseID() == courseID && enrolmentList.get(i).getStudentID() == studentID){
-                enrolmentList.remove(i);
 
+        for(int i = 0;i <= enrolmentList.size()-1 ;i++){
+
+            if(enrolmentList.get(i).getCourseID() == courseID && enrolmentList.get(i).getStudentID() == studentID){
+
+                enrolmentList.remove(i);
 
             }
         }
@@ -107,7 +112,6 @@ public void updateStudentID(int ID,int studentID){
 
 }
 
-
 public  Enrolment findEnrolmentByStudentCourseId(int studentId,int courseId){
 
          for(Enrolment enrolment:enrolmentList){
@@ -117,7 +121,9 @@ public  Enrolment findEnrolmentByStudentCourseId(int studentId,int courseId){
                   return  enrolment;
               }
          }
+
          return null;
+
 }
 public void updateCourseID(int studentId,int courseId,int newCourseID){
 
@@ -125,7 +131,9 @@ public void updateCourseID(int studentId,int courseId,int newCourseID){
          Enrolment enrolment=findEnrolmentByStudentCourseId(studentId,courseId);
 
          if(enrolment != null) {
-            enrolment.setCourseID(newCourseID);
+
+             enrolment.setCourseID(newCourseID);
+
          }
 }
 
@@ -136,7 +144,9 @@ private int[] frecVentaCursuri() {
          int[] frecventaCursuri= new int[100000];
 
         for(Enrolment e:enrolmentList){
+
              frecventaCursuri[e.getCourseID()]++;
+
         }
 
         return  frecventaCursuri;
@@ -191,39 +201,95 @@ public int courseswithFewestStudents(){
 
        ArrayList<Enrolment> enrolments= new ArrayList<>();
 
-        for(int i = 0 ;i < enrolmentList.size();i++) {
-            if(enrolmentList.get(i).getCourseID() == id){
+        for(Enrolment m : enrolmentList) {
 
-                enrolments.add(enrolments.get(i));
+            if(m.getCourseID() == id){
+
+                enrolments.add(m);
+
             }
 
         }
 
         return enrolments;
+
     }
 
 
 public int Size(){
-    return enrolmentList.size();
-}
+
+        return enrolmentList.size();
+
+    }
 
 public boolean findbyIDStudent(int enrolmentID,int studentID ){
+
         for (int i = 0; i < enrolmentList.size() ;i++){
+
             if(enrolmentList.get(i).getStudentID() == studentID && enrolmentList.get(i).getId() == enrolmentID ){
+
                 return true;
+
             }
 
         }
+
         return false;
-}
+
+    }
+
 public boolean findCourseID(int studentID,int courseID){
+
         for(int i = 0 ;i <= enrolmentList.size() -1 ;i++){
+
             if(enrolmentList.get(i).getStudentID() == studentID && enrolmentList.get(i).getCourseID() == courseID){
+
                 return true;
+
             }
 
         }
+
         return false;
-}
+
+    }
+
+
+public boolean findStudentbyCourse(int idStudent,int courseId){
+
+        ArrayList<Enrolment> enrolments = returnEnrolmentbyCourse(courseId);
+
+        for(int i = 0 ; i <= enrolments.size() -1 ;i++){
+
+            if(enrolments.get(i).getStudentID() == idStudent){
+
+                return true;
+
+            }
+
+        }
+
+        return false;
+
+    }
+    public String toString(){
+        String text ="";
+        for (int i = 0 ; i <= enrolmentList.size();i++){
+            text += enrolmentList.get(i).toString() +"\n";
+        }
+        return text;
+    }
+    public void save(){
+        try{
+            File file = new File("C:\\mycode\\JavaBasics\\OOP\\OnlineSchool\\src\\ro\\mycode\\resources\\enrolment.txt");
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.print(this);
+            printWriter.close();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
 }

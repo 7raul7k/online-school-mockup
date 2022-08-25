@@ -25,6 +25,7 @@ public class ViewProfesor {
         System.out.println("Apasati 1 pentru a vedea studentii inscrisi la curs");
         System.out.println("Apasati 2 pentru a creea un curs");
         System.out.println("Apasati 3 pentru a sterge un curs");
+        System.out.println("Apasati 4 pentru a vedea cursurile");
     }
     public void play(){
         boolean running = true;
@@ -51,6 +52,11 @@ public class ViewProfesor {
         }
 
     }
-    public void crearecursNou(){}
+    public void crearecursNou(){
+        ControlCourse course = new ControlCourse();
+        Course
+        System.out.println("Introduceti numele cursului");
+
+    }
     public void stergerecurs(){}
 }

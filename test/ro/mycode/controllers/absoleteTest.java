@@ -40,8 +40,8 @@ class absoleteTest extends ControlEnrolment {
     public void updateLNameTest(){
         absolete controlStudent = new absolete();
         controlStudent.updateLName("David","Cosmin");
-        assertEquals(false,controlStudent.findbyLastName("Alexandru","alexandrudavid@gmail.com"));
         assertEquals(true,controlStudent.findbyLastName("David","alexandrudavid@gmail.com"));
+        assertEquals(false,controlStudent.findbyLastName("eduardeduard@gmail.com","eduardeduard@gmail.com"));
     }
 
     @Test
@@ -51,7 +51,6 @@ class absoleteTest extends ControlEnrolment {
         controlStudent.updateEmail("David","daviddavid@gmail.com");
         assertEquals(false,controlStudent.findByEmail("David","alexandrudavid@gmail.com"));
         assertEquals(true,controlStudent.findByEmail("David","daviddavid@gmail.com"));
-
 
     }
 
@@ -72,6 +71,15 @@ class absoleteTest extends ControlEnrolment {
 
         assertEquals(true,controlStudent.findByEmail("Craciun","davidcraciun@gmail.com"));
     }
+
+    @Test
+    public void verifylogintest(){
+        absolete absolete = new absolete();
+        assertEquals(true,absolete.verifyLogin("alexandrudavid@gmail.com","alexandrudavid@gmail.com2022"));
+        assertEquals(false,absolete.verifyLogin("bogdanbogdan@gmail.com","bogdanbogdan"));
+    }
+
+
 
 
 

@@ -1,7 +1,7 @@
 package ro.mycode.models;
 
 public class Teacher extends User{
-    public String domeniu;
+    private String domeniu;
 
     public Teacher(int id, String firstName, String lastName, String email, int age,String tip,String domeniu){
         super(id, firstName, lastName, email, age, tip);
